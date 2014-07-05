@@ -1,5 +1,5 @@
 require File.expand_path(File.dirname(__FILE__) + '/../test_helper')
-
+require "custom_field/ladder"
 class LadderTest < Test::Unit::TestCase
   def setup
     @ladder=CustomField::Ladder.build "TestLadder"
