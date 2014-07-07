@@ -40,23 +40,38 @@ Created a new file test.rb:
         ...
       end
     end
-    
+
 Get all ladders:
+
     CustomField::Ladder.all
+
 Get a ladder by name:
+
     CustomField::Ladder.by("root ladder")
+
 Get all items:
+
     CustomField::Ladder.by("root ladder").items
+
 Get a item by name:
+
     CustomField::Ladder.by("root ladder").items.by_item("first item")
+
 Get all templates:
+
     CustomField::Ladder.by("root ladder").items.by_item("first item").templates
+
 Get a template by name:
+
     CustomField::Ladder.by("root ladder").items.by_item("first item").templates.by_name("one template")
 
 Get all fields:
+
+
     CustomField::Ladder.by("root ladder").items.by_item("first item").templates.by_name("one template").fields
+    
 Get a field by name:
+
     CustomField::Ladder.by("root ladder").items.by_item("first item").templates.by_name("one template").fields.by_name("sex")
 
 ## Contributing
