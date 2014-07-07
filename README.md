@@ -19,28 +19,28 @@ Or install it yourself as:
 ## Usage
 Created a new file test.rb:
 #+BEGIN_SRC
-CustomField::Ladder.build "root ladder" do |ladder|
-  ladder.item "first item" do |item|
-    item.template "one template","build a template path" do |template|
-      # template.field name,type
-      template.field "name","text"
-      template.field "sex","radio",assoc: ["Male","Female"]
-      template.field "favorite","checkbox",assoc: ["football","basketball"]
-      template.field "intro","textarea"
-    end
+    CustomField::Ladder.build "root ladder" do |ladder|
+      ladder.item "first item" do |item|
+        item.template "one template","build a template path" do |template|
+          # template.field name,type
+          template.field "name","text"
+          template.field "sex","radio",assoc: ["Male","Female"]
+          template.field "favorite","checkbox",assoc: ["football","basketball"]
+          template.field "intro","textarea"
+        end
 
-    item.template "two template","build a template path" do |template|
-      template.field "name","text"
-      template.field "sex","radio",assoc: ["Male","Female"]
-      template.field "favorite","checkbox",assoc: ["football","basketball"]
-      template.field "intro","textarea"
-    end
-  end
+        item.template "two template","build a template path" do |template|
+          template.field "name","text"
+          template.field "sex","radio",assoc: ["Male","Female"]
+          template.field "favorite","checkbox",assoc: ["football","basketball"]
+          template.field "intro","textarea"
+        end
+      end
 
-  ladder.item "twice item" do |item|
-    ...
-  end
-end
+      ladder.item "twice item" do |item|
+        ...
+      end
+    end
 #+END_SRC
 Get all ladders:
     CustomField::Ladder.all
