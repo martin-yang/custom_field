@@ -1,5 +1,6 @@
 require File.expand_path(File.dirname(__FILE__) + '/../test_helper')
 require "custom_field/ladder"
+require "custom_field/item"
 class LadderTest < Test::Unit::TestCase
   def setup
     @ladder=CustomField::Ladder.build "TestLadder"
@@ -11,6 +12,6 @@ class LadderTest < Test::Unit::TestCase
   end
 
   def test_should_have_a_item
-    assert_equal 1,@ladder.items
+    assert_equal 1,@ladder.items.size
   end
 end
