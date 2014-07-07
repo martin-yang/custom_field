@@ -54,32 +54,36 @@ Get all ladders:
 
 Get a ladder by name:
 
-    CustomField::Ladder.by("root ladder")
+    ladder=CustomField::Ladder.by("root ladder")
 
 Get all items:
 
-    CustomField::Ladder.by("root ladder").items
+    ladder.items
 
 Get a item by name:
 
-    CustomField::Ladder.by("root ladder").items.by_item("first item")
+    item=ladder.items.by_item("first item")
 
 Get all templates:
 
-    CustomField::Ladder.by("root ladder").items.by_item("first item").templates
+    item.templates
 
 Get a template by name:
 
-    CustomField::Ladder.by("root ladder").items.by_item("first item").templates.by_name("one template")
+    template=item.templates.by_name("one template")
 
 Get all fields:
 
 
-    CustomField::Ladder.by("root ladder").items.by_item("first item").templates.by_name("one template").fields
+    template.fields
 
 Get a field by name:
 
-    CustomField::Ladder.by("root ladder").items.by_item("first item").templates.by_name("one template").fields.by_name("sex")
+    field=template.fields.by_name("name") #<input type="text" name="name"/>
+
+Field convert to html in Rails
+
+    field.html_safe
 
 ## Contributing
 
