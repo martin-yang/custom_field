@@ -18,7 +18,6 @@ Or install it yourself as:
 
 ## Usage
 Created a new file test.rb:
-#+BEGIN_SRC
     CustomField::Ladder.build "root ladder" do |ladder|
       ladder.item "first item" do |item|
         item.template "one template","build a template path" do |template|
@@ -41,7 +40,7 @@ Created a new file test.rb:
         ...
       end
     end
-#+END_SRC
+    
 Get all ladders:
     CustomField::Ladder.all
 Get a ladder by name:
