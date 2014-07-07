@@ -1,6 +1,10 @@
 # CustomField
 
-TODO: Write a gem description
+Use ruby Custom build form fields
+
+# Ruby Version
+
+Ruby 2.0.0
 
 ## Installation
 
