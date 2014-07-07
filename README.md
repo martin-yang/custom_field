@@ -17,8 +17,48 @@ Or install it yourself as:
     $ gem install custom_field
 
 ## Usage
+Created a new file test.rb:
+#+BEGIN_SRC
+CustomField::Ladder.build "root ladder" do |ladder|
+  ladder.item "first item" do |item|
+    item.template "one template","build a template path" do |template|
+      # template.field name,type
+      template.field "name","text"
+      template.field "sex","radio",assoc: ["Male","Female"]
+      template.field "favorite","checkbox",assoc: ["football","basketball"]
+      template.field "intro","textarea"
+    end
 
-TODO: Write usage instructions here
+    item.template "two template","build a template path" do |template|
+      template.field "name","text"
+      template.field "sex","radio",assoc: ["Male","Female"]
+      template.field "favorite","checkbox",assoc: ["football","basketball"]
+      template.field "intro","textarea"
+    end
+  end
+
+  ladder.item "twice item" do |item|
+    ...
+  end
+end
+#+END_SRC
+Get all ladders:
+    CustomField::Ladder.all
+Get a ladder by name:
+    CustomField::Ladder.by("root ladder")
+Get all items:
+    CustomField::Ladder.by("root ladder").items
+Get a item by name:
+    CustomField::Ladder.by("root ladder").items.by_item("first item")
+Get all templates:
+    CustomField::Ladder.by("root ladder").items.by_item("first item").templates
+Get a template by name:
+    CustomField::Ladder.by("root ladder").items.by_item("first item").templates.by_name("one template")
+
+Get all fields:
+    CustomField::Ladder.by("root ladder").items.by_item("first item").templates.by_name("one template").fields
+Get a field by name:
+    CustomField::Ladder.by("root ladder").items.by_item("first item").templates.by_name("one template").fields.by_name("sex")
 
 ## Contributing
 
