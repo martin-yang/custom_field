@@ -27,7 +27,7 @@ Created a new file test.rb:
 CustomField::Ladder.build "root ladder" do |ladder|
   ladder.item "first item" do |item|
     item.template "one template","build a template path" do |template|
-      # template.field name,type
+      # build fields in template
       template.field "name","text"
       template.field "sex","radio",assoc: ["Male","Female"]
       template.field "favorite","checkbox",assoc: ["football","basketball"]
